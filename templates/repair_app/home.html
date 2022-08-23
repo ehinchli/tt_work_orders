@@ -1,0 +1,8 @@
+{% extends "repair_app/base.html" %}
+{% block content %}
+    {% for wo in workOrders %}
+        <h1><a href="{% url 'workOrder-detail' wo.id %}">{{ wo.client }}</a></h1>
+        <p>By {{ wo.device }}</p>
+        <p>By {{ wo.submission_notes }}</p>
+    {% endfor %}
+{% endblock content %}
